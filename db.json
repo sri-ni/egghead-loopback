@@ -5,7 +5,8 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Product": 3
+    "Product": 5,
+    "Category": 5
   },
   "models": {
     "User": {},
@@ -14,8 +15,14 @@
     "RoleMapping": {},
     "Role": {},
     "Product": {
-      "1": "{\"name\":\"Coffee\",\"price\":11.99,\"id\":1}",
-      "2": "{\"name\":\"Tea\",\"price\":7.99,\"id\":2}"
+      "1": "{\"id\":1,\"name\":\"Coffee\",\"price\":11.99,\"categoryId\":3}",
+      "2": "{\"id\":2,\"name\":\"Tea\",\"price\":7.99,\"categoryId\":3}",
+      "3": "{\"id\":3,\"name\":\"Biscuits\",\"price\":3.99,\"categoryId\":4}",
+      "4": "{\"id\":4,\"name\":\"LemonCake\",\"price\":8.99,\"categoryId\":4}"
+    },
+    "Category": {
+      "3": "{\"name\":\"Drink\",\"id\":3}",
+      "4": "{\"name\":\"Food\",\"id\":4}"
     }
   }
 }
