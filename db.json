@@ -1,16 +1,21 @@
 {
   "ids": {
-    "User": 1,
-    "AccessToken": 1,
+    "User": 2,
+    "AccessToken": 3,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Product": 6,
-    "Category": 5
+    "Product": 10,
+    "Category": 10
   },
   "models": {
-    "User": {},
-    "AccessToken": {},
+    "User": {
+      "1": "{\"password\":\"$2a$10$rIBxuG0g5rbBPfW1UphMZ.v2WktgpJ6W2vE7p.UkP95hdAP78FFfC\",\"email\":\"admin@example.com\",\"id\":1}"
+    },
+    "AccessToken": {
+      "a4cMUCkWptdLYGckIvzOAYkbLuEFpQCUeYqxEf5Iofe3Yq5mza38SFlECAWkcre4": "{\"id\":\"a4cMUCkWptdLYGckIvzOAYkbLuEFpQCUeYqxEf5Iofe3Yq5mza38SFlECAWkcre4\",\"ttl\":1209600,\"created\":\"2017-07-28T15:52:28.842Z\",\"userId\":1}",
+      "s3cr3t": "{\"id\":\"s3cr3t\",\"userId\":1}"
+    },
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
@@ -19,11 +24,20 @@
       "2": "{\"id\":2,\"name\":\"Tea\",\"price\":7.99,\"categoryId\":3}",
       "3": "{\"id\":3,\"name\":\"Biscuits\",\"price\":3.99,\"categoryId\":4}",
       "4": "{\"id\":4,\"name\":\"LemonCake\",\"price\":8.99,\"categoryId\":4}",
-      "5": "{\"name\":\"Coke\",\"price\":2.99,\"categoryId\":3,\"id\":5}"
+      "5": "{\"name\":\"Coke\",\"price\":2.99,\"categoryId\":3,\"id\":5}",
+      "6": "{\"name\":\"Fridge\",\"price\":1199,\"categoryId\":7,\"id\":6}",
+      "7": "{\"name\":\"Microwave\",\"price\":399,\"categoryId\":7,\"id\":7}",
+      "8": "{\"name\":\"Vitamix\",\"price\":599,\"categoryId\":7,\"id\":8}",
+      "9": "{\"name\":\"Toaster Oven\",\"price\":299,\"categoryId\":7,\"id\":9}"
     },
     "Category": {
       "3": "{\"name\":\"Drink\",\"id\":3}",
-      "4": "{\"name\":\"Food\",\"id\":4}"
+      "4": "{\"name\":\"Food\",\"id\":4}",
+      "5": "{\"name\":\"Supplies\",\"id\":5}",
+      "6": "{\"name\":\"Furniture\",\"id\":6}",
+      "7": "{\"name\":\"Applicances\",\"id\":7}",
+      "8": "{\"name\":\"Electronics\",\"id\":8}",
+      "9": "{\"name\":\"Furniture\",\"id\":9}"
     }
   }
 }
