@@ -11,7 +11,7 @@
     "start": "node .",
     "test": "NODE_ENV=test mocha test/**/*.test.js",
     "test:watch": "npm run test -- --watch",
-    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js egg-client/src/app/shared/sdk"
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ../egg-client/src/app/shared/sdk"
   },
   "dependencies": {
     "compression": "^1.0.3",
