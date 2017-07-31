@@ -1,4 +1,4 @@
-<h3>
+<!-- <h3>
   Products
 </h3>
 
@@ -26,30 +26,34 @@
   <li *ngFor="let place of places">
     <p>{{place.name}}</p>
   </li>
-</ul>
+</ul> -->
 
 <h3>
   Populations
 </h3>
-
+<!--
 <ul>
   <li *ngFor="let population of populations">
     <p>{{population.city}}: {{population.population}}</p>
   </li>
-</ul>
+</ul> -->
 
-<!-- <ngx-charts-line-chart
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="populations"
-  [gradient]="gradient"
-  [xAxis]="showXAxis"
-  [yAxis]="showYAxis"
-  [legend]="showLegend"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
-  [autoScale]="autoScale"
-  (select)="onSelect($event)">
-</ngx-charts-line-chart> -->
+
+
+<div *ngIf="populations">
+  <ngx-charts-line-chart
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="populations"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [autoScale]="autoScale"
+    (select)="onSelect($event)">
+  </ngx-charts-line-chart>
+</div>

@@ -17,7 +17,7 @@ export class StatComponent implements OnInit {
   private products: [Product];
   private categories: [Category];
   private places: [Place];
-  private populations: [Population];
+  private populations: any[];
 
   view: any[] = [700, 400];
 
@@ -27,7 +27,7 @@ export class StatComponent implements OnInit {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Country';
+  xAxisLabel = 'City';
   showYAxisLabel = true;
   yAxisLabel = 'Population';
 
@@ -75,8 +75,21 @@ export class StatComponent implements OnInit {
 
   getPopulations() {
     this.populationApi.find().subscribe((populations: [Population]) => {
-      this.populations = populations;
+      populations.map(function(pop) {
+        pop['name'] = pop.city;
+        pop['value'] = pop.population;
+      });
+      this.populations = [
+        {
+          name: 'Population',
+          series: populations
+        }
+      ];
       console.log('this.populations = ', this.populations);
     });
+  }
+
+  onSelect(event) {
+    console.log(event);
   }
 }
