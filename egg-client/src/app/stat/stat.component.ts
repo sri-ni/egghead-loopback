@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Product, Category, Place } from '../shared/sdk/models';
-import { ProductApi, CategoryApi, PlaceApi } from '../shared/sdk/services';
+import { Product, Category, Place, Population } from '../shared/sdk/models';
+import {
+  ProductApi,
+  CategoryApi,
+  PlaceApi,
+  PopulationApi
+} from '../shared/sdk/services';
 
 @Component({
   selector: 'app-stat',
@@ -12,17 +17,39 @@ export class StatComponent implements OnInit {
   private products: [Product];
   private categories: [Category];
   private places: [Place];
+  private populations: [Population];
+
+  view: any[] = [700, 400];
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+  yAxisLabel = 'Population';
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  };
+
+  // line, area
+  autoScale = true;
 
   constructor(
     private productApi: ProductApi,
     private categoryApi: CategoryApi,
-    private placeApi: PlaceApi
+    private placeApi: PlaceApi,
+    private populationApi: PopulationApi
   ) {}
 
   ngOnInit() {
     this.getProducts();
     this.getCategories();
     this.getPlaces();
+    this.getPopulations();
   }
 
   getProducts() {
@@ -43,6 +70,13 @@ export class StatComponent implements OnInit {
     this.placeApi.find().subscribe((places: [Place]) => {
       this.places = places;
       console.log('this.places = ', this.places);
+    });
+  }
+
+  getPopulations() {
+    this.populationApi.find().subscribe((populations: [Population]) => {
+      this.populations = populations;
+      console.log('this.populations = ', this.populations);
     });
   }
 }

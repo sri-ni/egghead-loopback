@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Full Stack Data Viz app';
+  techSubTitle = '(Angular + D3 + LoopBack Node.js + MongoDB)';
 }

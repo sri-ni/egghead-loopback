@@ -4,6 +4,7 @@ import { User } from '../../models/User';
 import { Product } from '../../models/Product';
 import { Category } from '../../models/Category';
 import { Place } from '../../models/Place';
+import { Population } from '../../models/Population';
 
 export interface Models { [name: string]: any }
 
@@ -15,6 +16,7 @@ export class SDKModels {
     Product: Product,
     Category: Category,
     Place: Place,
+    Population: Population,
     
   };
 

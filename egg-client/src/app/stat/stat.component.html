@@ -4,8 +4,7 @@
 
 <ul>
   <li *ngFor="let product of products">
-    <h4>{{product.name}}</h4>
-    <p>{{product.price}}</p>
+    <p>{{product.name}}: {{product.price}}</p>
   </li>
 </ul>
 
@@ -15,7 +14,7 @@
 
 <ul>
   <li *ngFor="let category of categories">
-    <h4>{{category.name}}</h4>
+    <p>{{category.name}}</p>
   </li>
 </ul>
 
@@ -25,6 +24,32 @@
 
 <ul>
   <li *ngFor="let place of places">
-    <h4>{{place.name}}</h4>
+    <p>{{place.name}}</p>
   </li>
 </ul>
+
+<h3>
+  Populations
+</h3>
+
+<ul>
+  <li *ngFor="let population of populations">
+    <p>{{population.city}}: {{population.population}}</p>
+  </li>
+</ul>
+
+<!-- <ngx-charts-line-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="populations"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [autoScale]="autoScale"
+  (select)="onSelect($event)">
+</ngx-charts-line-chart> -->

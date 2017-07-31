@@ -46,5 +46,9 @@
   "Place": {
     "dataSource": "db",
     "public": true
+  },
+  "Population": {
+    "dataSource": "db",
+    "public": true
   }
 }
